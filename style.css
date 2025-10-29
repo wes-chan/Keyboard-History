@@ -4,6 +4,8 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import '../node_modules/animate.css/animate.css';
+
 
 
 html, body {
@@ -12,7 +14,14 @@ html, body {
     font-size: 20px;
     background-color: #CFCFCF;
     color: #333333;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+
+p {
+    line-height: 1.6;
+}
+
 
 
 
@@ -55,8 +64,223 @@ header span {
 
 .content {
     text-align: left;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
-    line-height: 1.5;
+    
+ 
     
 }
+
+/* NAV */
+.timeline-nav {
+    position: fixed;
+    top: 50%;
+    width: 250px;
+    margin: 0;
+    z-index: 1000;
+    transform: translateY(-50%);
+    margin-left: 50px;
+    
+    
+    
+    
+ 
+}
+
+.line {
+    position: absolute;
+    left: 12px;
+    
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: #333333;
+    opacity: 75%;
+
+    
+}
+
+
+.timeline-nav .item a.dot-label {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    color: #333333;
+     width: max-content;
+
+
+}
+
+.timeline-nav .item {
+margin-bottom: 50px;
+}
+
+
+
+.timeline-nav .dot {
+    
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #333333;
+
+    position: relative;
+   
+    display: inline-block;
+    background-color: #CFCFCF;
+    transition: background-color 0.5s ease, transform 0.2s ease-in;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.timeline-nav .label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.timeline-nav .dot.active {
+    background-color: rgb(158, 211, 255);
+    transform: scale(1.25);
+}
+
+
+
+/* TYPEWRITER TYPING SIMULATOR */
+
+
+/* TIMELINE */
+.ibm-timeline {
+    position: relative;
+    width: 75%;
+    height:auto;
+    margin: 0 auto;
+    padding-left: 40px;
+     
+}
+
+.ibm-event {
+    height: 100vh;
+    opacity: 0;
+    margin: 50px 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 75px;
+}
+
+.ibm-event .text {
+    flex: 1;
+    text-align: left;
+
+  
+
+}
+
+.ibm-event .image {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+  
+     
+}
+
+.ibm-event .image img {
+    max-width: 48%;
+    height: auto;
+    border-radius: 10px;
+    
+
+
+}
+
+.ibm-event .image img:only-child {
+    max-width: 100%;
+    margin:0 auto;
+}
+
+.ibm-event h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* TEST */
+
+/* Exploding Keyboard */
+
+.keyboard {
+    
+    position: relative;
+    
+
+
+    height: 200vh;
+    margin-top: 200px;
+   
+   
+}
+
+
+.keyboard-container {
+    position: sticky;
+    top: 50px;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+
+    min-height: 90vh 
+   
+ 
+}
+
+.keyboard-container img:hover {
+   
+  
+    filter: brightness(1.2);
+
+}
+
+.keyboard-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.7s ease-out;
+  z-index: 0;
+}
+
+
+.layer1{ z-index: 5;}
+.layer2{ 
+    z-index: 4; 
+    
+
+}
+.layer3{ z-index: 3;}
+.layer4{ z-index: 2;}
+.layer5{ 
+    z-index: 1;
+    
+
+}
+
+.keyboard-card {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.layer1:hover ~ .keyboard-card {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
