@@ -271,16 +271,21 @@ margin-bottom: 50px;
 }
 
 .keyboard-card {
+position: fixed;
+left: 80%;
+top: 30%;
   opacity: 0;
-  pointer-events: none;
   transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 300px;
 }
 
 
-.layer1:hover ~ .keyboard-card {
+.layer1:hover + #topcase,
+.layer2:hover + #plate,
+.layer3:hover + #pcb,
+.layer4:hover + #bottom,
+.layer5:hover + #weight {
   opacity: 1;
-  pointer-events: auto;
   transform: translateY(0);
 }
-
