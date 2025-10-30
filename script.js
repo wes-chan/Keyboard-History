@@ -41,20 +41,29 @@ function timelineFadeIn(eventSelector) {
 }
 
 function explodeKeyboard(){
+   
+   const keyboard = $('.keyboard');
    const layers = $('.keyboard-layer');
-
+   const size = 150*2;
     $('.keyboard').waypoint(function(direction) {
         if(direction === 'down') {
             
             layers.each(function(index) {
-                let distance = (index + 1) * 150; 
+             
+                let distance = (index) * 150; 
+                
                 $(this).css('transform', `translateY(${distance}px)`);
+                
             });
+
+            keyboard.css('height', (keyboard.height() + size) + 'px');
         } else {
             
             layers.css('transform', 'translateY(0)');
+          
+            keyboard.css('height', (keyboard.height() - size) + 'px');
         }
-    }, { offset: '-10%' });
+    }, { offset: '10%' });
 }
 
 

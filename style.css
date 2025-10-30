@@ -217,29 +217,22 @@ margin-bottom: 50px;
 .keyboard {
     
     position: relative;
+    height: 100vh;
     
 
 
-    height: 200vh;
-    margin-top: 200px;
-   
-   
-}
 
-
-.keyboard-container {
-    position: sticky;
-    top: 50px;
-    max-width: 1000px;
-    width: 90%;
+    width: 1000px;
     margin: 0 auto;
-
-    min-height: 90vh 
+        margin-top: 200px;
    
- 
+   
 }
 
-.keyboard-container img:hover {
+
+
+
+.keyboard img:hover {
    
   
     filter: brightness(1.2);
@@ -257,18 +250,10 @@ margin-bottom: 50px;
 
 
 .layer1{ z-index: 5;}
-.layer2{ 
-    z-index: 4; 
-    
-
-}
+.layer2{ z-index: 4;    }
 .layer3{ z-index: 3;}
 .layer4{ z-index: 2;}
-.layer5{ 
-    z-index: 1;
-    
-
-}
+.layer5{ z-index: 1;}
 
 .keyboard-card {
 position: fixed;
@@ -288,4 +273,11 @@ top: 30%;
 .layer5:hover + #weight {
   opacity: 1;
   transform: translateY(0);
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #999999;
+    padding-left: 15px;
+    color: #666666;
 }
