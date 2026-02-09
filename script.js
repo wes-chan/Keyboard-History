@@ -44,7 +44,7 @@ function explodeKeyboard(){
    
    const keyboard = $('.keyboard');
    const layers = $('.keyboard-layer');
-   const size = 150*2;
+   const size = 150*3;
     $('.keyboard').waypoint(function(direction) {
         if(direction === 'down') {
             
@@ -63,19 +63,21 @@ function explodeKeyboard(){
           
             keyboard.css('height', (keyboard.height() - size) + 'px');
         }
-    }, { offset: '10%' });
+    }, { offset: '55%' });
 }
 
 
-$(document).ready(function() {
+
+
+$(function () {
    navigation();
    timelineFadeIn('.ibm-event')
    
    explodeKeyboard();
+ 
    
-
-   
-})
+}
+   )
 
 
 
